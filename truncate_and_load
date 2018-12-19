@@ -1,0 +1,89 @@
+use art_qa;
+########################################################
+SET SQL_SAFE_UPDATES = 0;
+delete  from user_client_security_profile;
+delete  from user_filter_account;
+delete  from user_filter_control;
+delete  from user_filter_plan;
+delete  from user_filter_selected;
+delete  from user_filter_suffix;
+delete  from user_filter;
+delete  from user_history;
+delete  from user_favorite;
+delete  from user_sort;
+delete  from user_system_security_profile;
+delete  from user;
+SET SQL_SAFE_UPDATES = 1;
+########################################################
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user.csv' INTO TABLE user
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_client_security_profile.csv' INTO TABLE user_client_security_profile
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_favorite.csv' INTO TABLE user_favorite
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter.csv' INTO TABLE user_filter
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter_account.csv' INTO TABLE user_filter_account 
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter_control.csv' INTO TABLE user_filter_control
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter_plan.csv' INTO TABLE user_filter_plan
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter_selected.csv' INTO TABLE user_filter_selected
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_filter_suffix.csv' INTO TABLE user_filter_suffix
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_sort.csv' INTO TABLE user_sort
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_system_security_profile.csv' INTO TABLE user_client_security_profile
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\N329306\\Desktop\\Delete external users queries\\data\\user_history.csv' INTO TABLE user_history
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
